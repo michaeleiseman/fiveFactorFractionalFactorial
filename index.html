@@ -99,7 +99,7 @@
         <div id="output"></div>
     </div>
     <script>
-        let users = ["Mingchen Guo", "Donghyun Kim", "Youxi Lin","Han Hui Ling", "Xinyu Liu", "Zihan Ma", "William McBride", "Nikhilesh Pediredla", "Manasvi Rajendra", "Olivia Vlad", "Andrew Zhang", "Demo"];
+        let users = ["Mingchen Guo", "Donghyun Kim", "Youxi Lin","Han Hui Ling", "Xinyu Liu", "Zihan Ma", "William McBride", "Nikhilesh Pediredla", "Manasvi Rajendra", "Olivia Vlad", "Yuanwei Xia", "Andrew Zhang", "Victor Zheng", "Demo"];
         let factors = [
             [
                 {
@@ -373,6 +373,33 @@
             ],
             [
                 {
+                    name: "Salt Concentration in %",
+                    lowerLimit: 5,
+                    upperLimit: 10
+                },
+                {
+                    name: "Temperature in C",
+                    lowerLimit: 15,
+                    upperLimit: 30
+                },
+                {
+                    name: "Relative Humidity",
+                    lowerLimit: 50,
+                    upperLimit: 100
+                },
+                {
+                    name: "Methanol Concentration in %",
+                    lowerLimit: 10,
+                    upperLimit: 20
+                },
+                {
+                    name: "Convection",
+                    lowerLimit: "No",
+                    upperLimit: "Yes"
+                }
+            ],
+            [
+                {
                     name: "Resistance in ohms",
                     lowerLimit: 5,
                     upperLimit: 10
@@ -396,6 +423,33 @@
                     name: "Amplitude in cm",
                     lowerLimit: 1,
                     upperLimit: 3
+                }
+            ],
+            [
+                {
+                    name: "Printing Material",
+                    lowerLimit: "Nylon",
+                    upperLimit: "PLA"
+                },
+                {
+                    name: "Print Speed in mm/s",
+                    lowerLimit: 50,
+                    upperLimit: 80
+                },
+                {
+                    name: "Plasticizer Concentration in %",
+                    lowerLimit: 0.3,
+                    upperLimit: 0.6
+                },
+                {
+                    name: "Pigmented",
+                    lowerLimit: "No",
+                    upperLimit: "Yes"
+                },
+                {
+                    name: "Number of Nozzles",
+                    lowerLimit: 1200,
+                    upperLimit: 2400
                 }
             ],
             [
@@ -430,318 +484,370 @@
             [
                 {
                     factors: [],
-                    coefficent: 954
+                    coefficient: 954
                 },
                 {
                     factors: [factors[0][1]],
-                    coefficent: -273
+                    coefficient: -273
                 },
                 {
                     factors: [factors[0][2]],
-                    coefficent: 195
+                    coefficient: 195
                 },
                 {
                     factors: [factors[0][3]],
-                    coefficent: -83.1
+                    coefficient: -83.1
                 },
                 {
                     factors: [factors[0][1], factors[0][3]],
-                    coefficent: -94
+                    coefficient: -94
                 },
                 {
                     factors: [factors[0][2], factors[0][3]],
-                    coefficent: 103
+                    coefficient: 103
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 65.8
+                    coefficient: 65.8
                 },
                 {
                     factors: [factors[1][0]],
-                    coefficent: 8.4
+                    coefficient: 8.4
                 },
                 {
                     factors: [factors[1][3]],
-                    coefficent: 5.7
+                    coefficient: 5.7
                 },
                 {
                     factors: [factors[1][4]],
-                    coefficent: -10.2
+                    coefficient: -10.2
                 },
                 {
                     factors: [factors[1][0], factors[1][3]],
-                    coefficent: 4.1
+                    coefficient: 4.1
                 },
                 {
                     factors: [factors[1][0], factors[1][4]],
-                    coefficent: -5.2
+                    coefficient: -5.2
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 2659
+                    coefficient: 2659
                 },
                 {
                     factors: [factors[2][0]],
-                    coefficent: 242
+                    coefficient: 242
                 },
                 {
                     factors: [factors[2][2]],
-                    coefficent: -307
+                    coefficient: -307
                 },
                 {
                     factors: [factors[2][4]],
-                    coefficent: -513
+                    coefficient: -513
                 },
                 {
                     factors: [factors[2][0], factors[2][4]],
-                    coefficent: 123
+                    coefficient: 123
                 },
                 {
                     factors: [factors[2][2], factors[2][4]],
-                    coefficent: -186
+                    coefficient: -186
                 }
                 
             ],
             [
                 {
                     factors: [],
-                    coefficent: 243
+                    coefficient: 243
                 },
                 {
                     factors: [factors[3][0]],
-                    coefficent: 37.5
+                    coefficient: 37.5
                 },
                 {
                     factors: [factors[3][2]],
-                    coefficent: -35.6
+                    coefficient: -35.6
                 },
                 {
                     factors: [factors[3][3]],
-                    coefficent: 25.3
+                    coefficient: 25.3
                 },
                 {
                     factors: [factors[3][0], factors[3][2]],
-                    coefficent: -11.6
+                    coefficient: -11.6
                 },
                 {
                     factors: [factors[3][2], factors[3][3]],
-                    coefficent: 14.7
+                    coefficient: 14.7
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 6.8
+                    coefficient: 6.8
                 },
                 {
                     factors: [factors[4][0]],
-                    coefficent: -1.04
+                    coefficient: -1.04
                 },
                 {
                     factors: [factors[4][1]],
-                    coefficent: 0.93
+                    coefficient: 0.93
                 },
                 {
                     factors: [factors[4][4]],
-                    coefficent: -0.72
+                    coefficient: -0.72
                 },
                 {
                     factors: [factors[4][0], factors[4][1]],
-                    coefficent: 0.52
+                    coefficient: 0.52
                 },
                 {
                     factors: [factors[4][1], factors[4][4]],
-                    coefficent: 0.62
+                    coefficient: 0.62
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 1343
+                    coefficient: 1343
                 },
                 {
                     factors: [factors[5][0]],
-                    coefficent: 47.5
+                    coefficient: 47.5
                 },
                 {
                     factors: [factors[5][1]],
-                    coefficent: 30.3
+                    coefficient: 30.3
                 },
                 {
                     factors: [factors[5][3]],
-                    coefficent: -63.6
+                    coefficient: -63.6
                 },
                 {
                     factors: [factors[5][0], factors[5][1]],
-                    coefficent: 22.4
+                    coefficient: 22.4
                 },
                 {
                     factors: [factors[5][0], factors[5][3]],
-                    coefficent: 17.5
+                    coefficient: 17.5
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 42.7
+                    coefficient: 42.7
                 },
                 {
                     factors: [factors[6][0]],
-                    coefficent: 7.9
+                    coefficient: 7.9
                 },
                 {
                     factors: [factors[6][1]],
-                    coefficent: -15.2
+                    coefficient: -15.2
                 },
                 {
                     factors: [factors[6][2]],
-                    coefficent: -5.4
+                    coefficient: -5.4
                 },
                 {
                     factors: [factors[6][0], factors[6][2]],
-                    coefficent: 4.1
+                    coefficient: 4.1
                 },
                 {
                     factors: [factors[6][1], factors[6][2]],
-                    coefficent: -5.3
+                    coefficient: -5.3
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 75.4
+                    coefficient: 75.4
                 },
                 {
                     factors: [factors[7][2]],
-                    coefficent: -20.5
+                    coefficient: -20.5
                 },
                 {
                     factors: [factors[7][3]],
-                    coefficent: -8.2
+                    coefficient: -8.2
                 },
                 {
                     factors: [factors[7][4]],
-                    coefficent: 11.4
+                    coefficient: 11.4
                 },
                 {
                     factors: [factors[7][2], factors[7][4]],
-                    coefficent: -12.3
+                    coefficient: -12.3
                 },
                 {
                     factors: [factors[7][3], factors[7][4]],
-                    coefficent: 8.6
+                    coefficient: 8.6
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 102
+                    coefficient: 102
                 },
                 {
                     factors: [factors[8][2]],
-                    coefficent: 17.2
+                    coefficient: 17.2
                 },
                 {
                     factors: [factors[8][3]],
-                    coefficent: -8.7
+                    coefficient: -8.7
                 },
                 {
                     factors: [factors[8][4]],
-                    coefficent: -11.1
+                    coefficient: -11.1
                 },
                 {
                     factors: [factors[8][2], factors[8][3]],
-                    coefficent: 5.2
+                    coefficient: 5.2
                 },
                 {
                     factors: [factors[8][3], factors[8][4]],
-                    coefficent: -6.3
+                    coefficient: -6.3
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 46.3
+                    coefficient: 46.3
                 },
                 {
                     factors: [factors[9][1]],
-                    coefficent: 7.8
+                    coefficient: 7.8
                 },
                 {
                     factors: [factors[9][2]],
-                    coefficent: -10.1
+                    coefficient: -10.1
                 },
                 {
                     factors: [factors[9][4]],
-                    coefficent: -5.6
+                    coefficient: -5.6
                 },
                 {
                     factors: [factors[9][1], factors[9][2]],
-                    coefficent: 3.9
+                    coefficient: 3.9
                 },
                 {
                     factors: [factors[9][2], factors[9][4]],
-                    coefficent: -4.6
+                    coefficient: -4.6
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 5.7
+                    coefficient: 82.3
                 },
                 {
-                    factors: [factors[10][1]],
-                    coefficent: 0.82
+                    factors: [factors[10][0]],
+                    coefficient: -11.4
+                },
+                {
+                    factors: [factors[10][2]],
+                    coefficient: 13.7
                 },
                 {
                     factors: [factors[10][3]],
-                    coefficent: -0.53
+                    coefficient: 9.8
                 },
                 {
-                    factors: [factors[10][4]],
-                    coefficent: -1.04
+                    factors: [factors[10][0], factors[10][2]],
+                    coefficient: -6.4
                 },
                 {
-                    factors: [factors[10][1], factors[10][3]],
-                    coefficent: 0.63
-                },
-                {
-                    factors: [factors[10][1], factors[10][4]],
-                    coefficent: -0.55
+                    factors: [factors[10][2], factors[10][3]],
+                    coefficient: 4.9
                 }
             ],
             [
                 {
                     factors: [],
-                    coefficent: 100
+                    coefficient: 5.7
                 },
                 {
                     factors: [factors[11][1]],
-                    coefficent: -16
+                    coefficient: 0.82
                 },
                 {
                     factors: [factors[11][3]],
-                    coefficent: 21
+                    coefficient: -0.53
                 },
                 {
                     factors: [factors[11][4]],
-                    coefficent: -8
+                    coefficient: -1.04
+                },
+                {
+                    factors: [factors[11][1], factors[11][3]],
+                    coefficient: 0.63
                 },
                 {
                     factors: [factors[11][1], factors[11][4]],
-                    coefficent: 6.2
+                    coefficient: -0.55
+                }
+            ],
+            [
+                {
+                    factors: [],
+                    coefficient: 66.1
                 },
                 {
-                    factors: [factors[11][3], factors[11][4]],
-                    coefficent: -4.3
+                    factors: [factors[12][0]],
+                    coefficient: 13.5
+                },
+                {
+                    factors: [factors[12][2]],
+                    coefficient: 9.4
+                },
+                {
+                    factors: [factors[12][3]],
+                    coefficient: -16.1
+                },
+                {
+                    factors: [factors[12][0], factors[12][3]],
+                    coefficient: 8.2
+                },
+                {
+                    factors: [factors[12][2], factors[12][3]],
+                    coefficient: 5.7
+                }
+            ],
+            [
+                {
+                    factors: [],
+                    coefficient: 100
+                },
+                {
+                    factors: [factors[13][1]],
+                    coefficient: -16
+                },
+                {
+                    factors: [factors[13][3]],
+                    coefficient: 21
+                },
+                {
+                    factors: [factors[13][4]],
+                    coefficient: -8
+                },
+                {
+                    factors: [factors[13][1], factors[13][4]],
+                    coefficient: 6.2
+                },
+                {
+                    factors: [factors[13][3], factors[13][4]],
+                    coefficient: -4.3
                 }
             ]
         ]
-        let noises = [22, 1, 40, 3, 0.2, 3, 1, 1, 1.5, 1.2, 0.15, 1];
+        let noises = [22, 1, 40, 3, 0.2, 3, 1, 1, 1.5, 1.2, 1.2, 0.15, 1.4, 1];
         let userIndex;
         let buttons;
         reset();
@@ -894,7 +1000,7 @@
             generateResponse() {
                 let response = 0;
                 for (let term of this.design.terms) {
-                    let value = term.coefficent;
+                    let value = term.coefficient;
                     for (let factor of term.factors) {
                         value = value * this.factors[this.design.factors.indexOf(factor)].element.value;
                     }
